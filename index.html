@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog Buku Kelas XI-F11</title>
+<style>
+:root{--navy:#16324f;--blue:#2d6a9f;--gold:#f4b942;--bg:#f4f7fb;--card:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#18212b}
+header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:42px 20px;text-align:center}
+header h1{margin:0;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:1px}
+header p{margin:10px 0 0;opacity:.9}
+main{max-width:1150px;margin:30px auto;padding:0 18px}
+.info{background:#fff;border-radius:18px;padding:22px;box-shadow:0 8px 30px #16324f18;margin-bottom:22px}
+.search{width:100%;padding:15px 18px;border:1px solid #d7dee8;border-radius:12px;font-size:16px;outline:none}
+.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2d6a9f22}
+.count{margin:15px 0 0;color:#536273;font-size:14px}
+.table-wrap{overflow:auto;background:var(--card);border-radius:18px;box-shadow:0 8px 30px #16324f18}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th{background:var(--navy);color:#fff;text-align:left;padding:16px}
+td{padding:14px 16px;border-bottom:1px solid #e8edf3}
+tr:hover td{background:#f5f9fd}
+.no{font-weight:bold;color:var(--blue);width:70px}
+footer{text-align:center;padding:35px 15px;color:#667085;font-size:14px}
+.badge{display:inline-block;background:#fff3cd;color:#805d00;padding:5px 10px;border-radius:20px;font-size:12px;margin-top:10px}
+@media(max-width:600px){header{padding:32px 15px}main{margin-top:20px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 KATALOG BUKU KELAS XI-F11</h1>
+  <p>Perpustakaan Digital • Daftar Koleksi Buku Kelas XI-F11</p>
+</header>
+
+<main>
+  <section class="info">
+    <input id="search" class="search" placeholder="🔎 Cari nama buku atau penulis..." oninput="filterBooks()">
+    <div class="count" id="count"></div>
+    <div class="badge">Data disusun berdasarkan foto katalog yang diberikan</div>
+  </section>
+
+  <div class="table-wrap">
+    <table id="bookTable">
+      <thead><tr><th>No.</th><th>Nama Buku</th><th>Penulis</th></tr></thead>
+      <tbody>
+        <tr><td class="no">1</td><td>Ikhlas Paling Tulus</td><td>Fajar Sulaiman</td></tr>
+        <tr><td class="no">2</td><td>Jika Kita Tak Pernah Baik-Baik Saja</td><td>Alvi Syahrin</td></tr>
+        <tr><td class="no">3</td><td>BTS Salah Gaul</td><td>Evi Kristiya Asmara</td></tr>
+        <tr><td class="no">4</td><td>Bandung After Rain</td><td>Wulan Nur Amalia</td></tr>
+        <tr><td class="no">5</td><td>Yes! Mr. Husband</td><td>Windi Sulistiani</td></tr>
+        <tr><td class="no">6</td><td>Kenakalan Anak Tupai</td><td>Ahmad Riyuan</td></tr>
+        <tr><td class="no">7</td><td>Aku Suka Memasak</td><td>Desti Bagis</td></tr>
+        <tr><td class="no">8</td><td>Sejarah Hidup Rasulullah</td><td>H. Badri Zamroni</td></tr>
+        <tr><td class="no">9</td><td>Kisah Putri Cinderella</td><td>Jihan Pavarti</td></tr>
+        <tr><td class="no">10</td><td>The Semiotics of Theater</td><td>Doris L. Jones</td></tr>
+        <tr><td class="no">11</td><td>Pesan, Tanda, dan Makna</td><td>Marcel Danesi</td></tr>
+        <tr><td class="no">12</td><td>Theater as Sign-System</td><td>Elaine Aston</td></tr>
+        <tr><td class="no">13</td><td>UUD 45</td><td>Pustaka Anak Bangsa</td></tr>
+        <tr><td class="no">14</td><td>RPUL Indonesia dan Dunia</td><td>Jhoni Hadi Saputra</td></tr>
+        <tr><td class="no">15</td><td>Kawruh Basa Jawa Pepak</td><td>Daryanto S.S.</td></tr>
+        <tr><td class="no">16</td><td>Kamus 800 Triliun</td><td>Billy Berlian Alexander</td></tr>
+        <tr><td class="no">17</td><td>Kamus 3 Bahasa</td><td>Muhammad Ilyas</td></tr>
+        <tr><td class="no">18</td><td>Pepak Basa Jawa Lengkap</td><td>Nulaini, S.Pd.</td></tr>
+        <tr><td class="no">19</td><td>The Count of Monte Cristo</td><td>Alexandre Dumas</td></tr>
+        <tr><td class="no">20</td><td>Melacak Jejak Perkembangan Seni di Indonesia</td><td>Prof. Dr. R. M. Soedarsono</td></tr>
+        <tr><td class="no">21</td><td>Kitab Fikih</td><td>Syekh Al-Islam</td></tr>
+        <tr><td class="no">22</td><td>Shorof</td><td>Ahmad Fauzan Nasrinu, A.</td></tr>
+        <tr><td class="no">23</td><td>Ke-NU-an</td><td>M. Wild Abba &amp; Zahrul Umam</td></tr>
+        <tr><td class="no">24</td><td>Hadist</td><td>Asy'ari Ahmad Al-Hasyim</td></tr>
+        <tr><td class="no">25</td><td>Sumber Rujukan Permasalahan Wanita</td><td>Lajnah Bahtsul Masail</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer>© 2026 Katalog Buku Kelas XI-F11 • Perpustakaan Digital</footer>
+
+<script>
+function filterBooks(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const rows=[...document.querySelectorAll('#bookTable tbody tr')];
+  let visible=0;
+  rows.forEach(r=>{
+    const match=r.innerText.toLowerCase().includes(q);
+    r.style.display=match?'':'none';
+    if(match) visible++;
+  });
+  document.getElementById('count').textContent=`Menampilkan ${visible} dari ${rows.length} buku`;
+}
+filterBooks();
+</script>
+</body>
+</html>
